@@ -1,4 +1,0 @@
-upf:
-  ip: {{ ip-addr }}
-  port: {{ port }}
-  mod: {{ type }}
