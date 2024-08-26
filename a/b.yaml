@@ -1,2 +1,13 @@
-upf:
-  ip: 127.0.0.2
+apiVersion: apps.mecplatform.com/v1
+kind: Upf
+metadata:
+  labels:
+    app.kubernetes.io/name: operator
+    app.kubernetes.io/managed-by: kustomize
+  name: akbar
+spec:
+  replicas: 1
+  ip: "10.100.230.70"
+  nodePort: 31152
+  image: registry.mecplatform.com:32392/docker_open5gs
+  envConfigMap: env
